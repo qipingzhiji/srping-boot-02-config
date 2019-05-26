@@ -1,14 +1,30 @@
 server:
   port: 8080
-  servlet:
-    context-path: /demo
-person:
-  name: admin
-  age: 18
-  maps: {key1: v1, key2: v2}
-  lists:
-    - cat
-    - dog
-  dog:
-    name: zz
-    age: 2
+  #servlet:
+   # context-path: /demo
+spring:
+  profiles:
+    active: dev
+
+# springboot yml语法文档块，可以用来分隔不同的环境，生产，测试，开发
+---
+server:
+  port: 8062
+spring:
+  profiles: dev
+---
+server:
+  port: 8083
+spring:
+  profiles: prod
+
+#person:
+ # age: 18
+  #maps: {key1: v1, key2: v2}
+  #lists:
+   # - cat
+    #- dog
+  #dog:
+    #name: zz
+    #age: 2
+  #name: admin

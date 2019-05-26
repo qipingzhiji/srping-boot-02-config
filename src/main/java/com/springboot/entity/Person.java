@@ -1,7 +1,10 @@
 package com.springboot.entity;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 import java.util.Map;
@@ -10,9 +13,13 @@ import java.util.Map;
  * Created by zhang_htao on 2019/5/26.
  */
 @Component
-@ConfigurationProperties(prefix = "person")
+@PropertySource(value = {"classpath:person.properties"})
+@ConfigurationProperties(prefix = "person") //此注解会自动绑定到springboot应用配置文件中的属性进行注入
+@Validated //注意只有和@ConfigurationProperties一起使用时才会生效
 public class Person {
+    //@Value("${person.name}")
     private String name;
+    //@Value("#{22*2}")
     private int age;
     private Map<String,String> maps;
     private List<String> lists;
