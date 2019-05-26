@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+person:
+  name: admin
+  age: 18
+  maps: {key1: v1, key2: v2}
+  lists:
+    - cat
+    - dog
+  dog:
+    name: zz
+    age: 2
