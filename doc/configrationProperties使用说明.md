@@ -26,3 +26,8 @@
   运行如下命令： java -jar xxx.jar --spring.profiles.active=你要使用的运行环境  
   + 在虚拟机运行时指定你要使用的参数格式   
   在vm options选项中指定： -Dspring.profiles.active=你要使用的运行环境  
+ ## spring boot 配置文件的加载顺序  
+  1. file:./config 意思是指的是项目根路径下的config文件夹下的配置文件,application.properties  
+  2. file:./  意思是指的是项目根路径下的配置文件  
+  3. classpath:/config/  意思是指的是classpath下的config文件夹下的配置文件  
+  4. classpath:./ 意思是指的是classpath下的配置文件  
