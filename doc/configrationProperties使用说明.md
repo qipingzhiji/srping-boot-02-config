@@ -1,3 +1,6 @@
+**springboot官方文档如下所示：**  
+
+[springboot 官方参考文档](https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#using-boot-starter)
 ## @ConfigurationProperties和@value的使用区别  
 
 + @ConfigurationPropertries  
@@ -31,3 +34,5 @@
   2. file:./  意思是指的是项目根路径下的配置文件  
   3. classpath:/config/  意思是指的是classpath下的config文件夹下的配置文件  
   4. classpath:./ 意思是指的是classpath下的配置文件  
+  springboot 会从这四个位置全部加载配置文件，互补配置。其中属性相同的配置文件会被高优先级的覆盖掉
+  可以在项目打包的时候指定要加载的配置文件路径，运行如下命令：java -jar xx.jar --spring.config.location=xxx  
