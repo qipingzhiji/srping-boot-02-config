@@ -36,3 +36,7 @@
   4. classpath:./ 意思是指的是classpath下的配置文件  
   springboot 会从这四个位置全部加载配置文件，互补配置。其中属性相同的配置文件会被高优先级的覆盖掉
   可以在项目打包的时候指定要加载的配置文件路径，运行如下命令：java -jar xx.jar --spring.config.location=xxx  
+  ## springboot统一日志管理    
+  1. 先将系统中的其它日志框架排除出去  
+  2. 用中间包来替换原有的日志框架  
+  3. 导入slf4j其它的日志框架的

@@ -3,6 +3,8 @@ package com.springboot;
 import com.springboot.entity.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
@@ -29,6 +31,12 @@ public class SrpingBoot02ConfigApplicationTests {
 	@Test
 	public void contextLoads() {
 		System.out.println(person.toString());
+	}
+    @Test
+	public  void logTest() {
+		Logger logger = LoggerFactory.getLogger(getClass());
+		logger.trace("这是一个trace日志记录");
+		logger.info("这是一个info日志记录");
 	}
 
 }
