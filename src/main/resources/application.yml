@@ -6,7 +6,7 @@ server:
 spring:
   profiles:
     active: dev
-debug: false #g开启此选项会打印出spring boot开启的默认配置选项
+#debug: false #开启此选项会打印出spring boot开启的默认配置选项
 
 # springboot yml语法文档块，可以用来分隔不同的环境，生产，测试，开发
 ---
